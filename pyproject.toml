@@ -1,0 +1,67 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mangak-downloader"
+version = "1.0.0"
+description = "A full-featured manga downloader for mangak.io with CLI and GUI interfaces"
+readme = "README.md"
+authors = [
+    {name = "xYui007"},
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Environment :: X11 Applications :: Qt",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Graphics",
+    "Topic :: Utilities",
+]
+keywords = ["manga", "downloader", "mangak", "comic", "cbz", "pdf"]
+requires-python = ">=3.11"
+dependencies = [
+    "typer[all]>=0.9.0",
+    "rich>=13.0.0",
+    "httpx>=0.25.0",
+    "pydantic>=2.0.0",
+    "PyQt6>=6.6.0",
+    "Pillow>=10.0.0",
+    "img2pdf>=0.5.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21",
+    "pytest-cov>=4.0",
+    "build>=1.0",
+    "twine>=4.0",
+]
+cli = []
+gui = ["PyQt6>=6.6.0"]
+
+[project.urls]
+Homepage = "https://github.com/Yui007/mangak-downloader"
+Repository = "https://github.com/Yui007/mangak-downloader"
+Documentation = "https://github.com/Yui007/mangak-downloader"
+
+[project.scripts]
+mangak = "mangak.cli.app:cli_entry"
+mangak-gui = "mangak.gui.app:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mangak"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/mangak"]
+
+[tool.hatch.build]
+force_include = {}
+artifacts = []
